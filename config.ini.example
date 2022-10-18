@@ -1,3 +1,5 @@
+CARGO_PATH=/path/to/graph-node/Cargo.toml
+
 PG_USER=graph
 PG_PASS=graph
 PG_HOST=localhost
