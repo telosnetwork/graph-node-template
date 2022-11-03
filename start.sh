@@ -6,6 +6,12 @@ INSTALL_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 LOG_NAME="$(basename $INSTALL_ROOT)"
 LOG_PATH="$INSTALL_ROOT/$LOG_NAME.log"
 
+#mainnet
+export GRAPH_ETHEREUM_GENESIS_BLOCK_NUMBER=180698860
+
+#testnet
+#export GRAPH_ETHEREUM_GENESIS_BLOCK_NUMBER=136393814
+
 CMD="cargo run --manifest-path $CARGO_PATH -p graph-node --release -- \
   --postgres-url postgresql://$PG_USER:$PG_PASS@$PG_HOST:$PG_PORT/$PG_DB_NAME \
   --ethereum-rpc $RPC_NAME:$RPC_URL \
